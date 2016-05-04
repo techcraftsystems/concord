@@ -56,6 +56,14 @@
 		<script src="js/popups.js"></script>
 		
 		<script>
+			$(document).ready(function() {
+				console.log( "ready!" );
+			});
+			
+			function submits(){
+				window.location.href = "https://gc.synxis.com/rez.aspx?Hotel=68584&Chain=16365";
+			}
+
 			function open_popups(index){
 				if (index == 0){
 					$('#content').removeClass('visible');
@@ -318,7 +326,6 @@
 				}
 			}
 		</style>
-
 	</head>
 	
 	
