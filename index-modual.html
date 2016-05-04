@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Concord - Hotel & Suites</title>
+		<link rel='shortcut icon' href='favicon.ico'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset='utf-8'>
+		
+		<!--[if lt IE 9]>
+				<script src="js/html5shiv.js"></script>
+			<![endif]-->
+		<!-- Bootstrap -->
+		
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+		<!-- Main Styles -->
+		<link href="css/style.css" rel="stylesheet" media="screen">
+		<link href="css/style-1.css" rel="stylesheet" media="screen">
+		<link href="css/responsive.css" rel="stylesheet" media="screen">
+		<!-- FLEXSLIDER -->
+		<link href="css/flexslider.css" rel="stylesheet" media="screen">
+		<!-- FONT AWESOME -->
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		
+		<!--[if IE 7]>
+			  <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+			<![endif]-->
+		<!-- SCRIPTS -->
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.form.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+		<script src="js/template.js"></script>
+		<script src="js/popups.js"></script>
+		
+		<script>
+			function open_popups(index){
+				if (index == 0){
+					$('#content').removeClass('visible');
+					$('body').removeClass('content_vis');
+				}
+				else if (index == 1){
+					$('#content').toggleClass('visible');
+					$('body').toggleClass('content_vis');
+				}
+			
+			}
+		</script>
+				
+				
+				
+	<script type='text1/css'>			
+	.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+	</script>			
+				
+		<style type='text/css'>
+			.slides #about{
+				background: #000 url("img/pop-ups/overview.jpg") repeat scroll 0 0;
+				min-height: 100%!important;
+				display: inline-block;
+			}
+			
+			.slides #services{
+				background: #000 url("img/pop-ups/wine-dine.jpg") repeat scroll 0 0;
+				min-height: 100%!important;
+				display: inline-block;
+			}
+			
+			.slides #subscribe{
+				background: #000 url("img/pop-ups/lifestyle.jpg") repeat scroll 0 0;
+				min-height: 100%!important;
+				display: inline-block;
+			}
+			
+			.slides #contacts{
+				background: #000 url("img/pop-ups/destination.jpg") repeat scroll 0 0;
+				min-height: 100%!important;
+				display: inline-block;
+			}
+			
+			.slides #accomodation{
+				background: #000 url("img/pop-ups/accomodation.jpg") repeat scroll 0 0;
+				min-height: 100%!important;
+				display: inline-block;
+			}
+			
+						.slides #contacts1{
+				background: #000 url("img/pop-ups/contact.jpg") repeat scroll 0 0;
+				min-height: 100%!important;
+				display: inline-block;
+			}
+			
+			.flex-viewport {
+				height:	100%!important;
+			}
+			.copyright{
+				bottom: 10px;
+				position:absolute;
+				left: 40px;
+			}
+			
+			.copyright1{
+				bottom: 0px;
+				width: 100%;
+				height:4 	%;
+				background: #fff;
+				padding-left: 40px;
+				position: absolute;
+			}
+		</style>
+		
+		
+	</head>
+	
+	
+	
+<body data-spy="scroll" data-target=".navbar" data-offset="150">
+	<header id="homepage" class="content-block homepage">
+	  <div class="intro-block"> 
+		<div class="flexslider" id="main-slider">
+		  <ul class="slides">
+			<li>
+				<div class="slide-content slide1">
+					<div class="slide-header" style="font-family:Times New Roman,Arial">For life’s finest indulgences</div>
+				</div>
+				<img class="slider-bg" alt="slider" src="img/backgrounds/background-1.jpg" />
+				<div class="skip1">SKIP INTRO</div>
+			</li>
+			
+			<li>
+				<div class="slide-content slide2">
+					<div class="slide-header" style="font-family:Times New Roman,Arial; padding-left:40px;">For experiences designed to awe</div>
+				</div>
+				<img class="slider-bg" alt="slider" src="img/backgrounds/background-2.jpg" />
+				<div class="skip2">SKIP INTRO</div>
+			</li>
+			
+			<li>
+				<div class="slide-content slide3">
+					<div class="slide-header" style="font-family:Times New Roman,Arial; padding-right:40px;">For memories that last a lifetime</div>
+				</div>
+				<img class="slider-bg" alt="slider" src="img/backgrounds/background-3.jpg" />
+				<div class="skip3">SKIP INTRO</div>
+			</li>
+			
+			<li>
+				<div class="slide-content slide4">
+					<div class="slide-header" style="margin-top:-15%;"><img alt="" src="img/slides/logo-slide.png" style="height:300px" /></div>
+				</div>
+				<img class="slider-bg" alt="slider" src="img/backgrounds/background-4.jpg" />
+				<div class="skip4">SEE WHAT YOU NEED</div>
+				
+			</li>
+		  </ul>
+		</div>
+		<!-- / Flexslider 
+		<a href="#" class="skip-intro"></a> </div>--> 
+	</header>
+	
+	
+	
+	<div id="portfolio" class="content-block portfolio">
+		<div id="first-line" class="container">
+			<a class="brand" href="#homepage">
+				<img src="img/logo.png" alt="" width="175px">
+			</a>
+			
+			<div class="nav-collapse collapse" style="float:right;padding-top:20px;">
+				<ul class="social">
+					<div class="fb"></div>
+					<div class="pn"></div>
+					<div class="tw"></div>
+					<div class="yt"></div>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<table width="106%">
+			<tr class="home-items">
+				<td width="16%">
+					<img src="img/home/overview.jpg" width="100%">
+					<div class="ro1" onclick="open_popups(1);">&nbsp;</div>
+				</td>
+				
+				<td width="16%">
+					<img src="img/home/wine&dine.jpg" width="100%">
+					<div class="ro2">&nbsp;</div>
+				</td>
+				
+				<td width="16%">
+					<img src="img/home/swimming-pool.jpg" width="100%">
+					<div class="ro3">&nbsp;</div>
+				</td>
+				
+				<td width="16%">
+					<img src="img/home/destination.jpg" width="100%">
+					<div class="ro4">&nbsp;</div>
+				</td>
+				
+				<td width="16%">
+					<img src="img/home/accomodation.jpg" width="100%">
+					<div class="ro5">&nbsp;</div>
+				</td>
+				
+				<td width="16%">
+					<img src="img/home/contact-us.jpg" width="100%">
+					<div class="ro6">&nbsp;</div>
+				</td>
+			</tr>
+		</table>
+		
+		<div class="copyright">Copyright &copy; The Concord Hotel & Suites, 2015</div>
+	</div>
+	
+	<section id="content">
+			<div id="content_inner">
+				<div class="closer" onclick="open_popups(0)">
+					&nbsp;
+				</div>
+			
+				<ul id="mainmenu">
+					<li><a href="#">OVERVIEW</a></li>
+					<li><a href="#">WINE AND DINE</a></li>
+					<li><a href="#">LIFESTYLE FEATURES</a></li>
+					<li><a href="#">DESTINATION</a></li>
+					<li><a href="#">ACCOMODATION</a></li>
+					<li><a href="#">CONTACT US</a></li>
+				</ul>
+				<div text-color=#fff>hhhk</div>
+				<div id="tab_contents">
+					<ul class='slides' style="min-height:200px; padding-top:0px; height:100%;">
+						
+						<!-- About Tab -->
+						
+						<li class="content_tab_item" id="about">
+							<div class="logo-tabs">
+								<img src="img/logo.png" width="175px" alt="" />
+							</div>
+							
+							<div class="content_tab_inner centered">
+								<div id="textline">
+									<span>A statement of architectural excellence, The Concord is an elegantly designed hotel featuring the best of convenience, luxury and entertainment. Strategically located on Wangapala Road, Nairobi within walking distance from The Diamond Plaza Shopping Centre, it features 86 rooms, tastefully designed, radiating warmth and sophistication.</span><p></p>
+									<span><a href="#">Click here</a> to view Gallery </span>
+									
+									
+										<a href="#openModal">Open Modal</a>
+
+										<div id="openModal" class="modalDialog">
+											<div>
+												<a href="#close" title="Close" class="close">X</a>
+												<h2>Modal Box</h2>
+												<p>This is a sample modal box that can be created using the powers of CSS3.</p>
+												<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+											</div>
+										</div>
+
+
+								</div>
+								
+								<div id="imgline">
+									
+								</div>
+								
+							</div>
+						</li>
+						
+						<div class="copyright1">Copyright &copy; The Concord Hotel & Suites, 2015</div>
+						
+						<!-- /About Tab -->	
+						
+						<!-- Services Tab -->
+						
+						<li class="content_tab_item" id="services">
+							<div class="logo-tabs">
+								<img src="img/logo.png" width="175px" alt="" />
+							</div>
+							
+							<div class="content_tab_inner centered">
+								<div id="textline">
+									<span>A host of mouthwatering delicacies await you at The Concord. Embark on a gastronomic journey filled with delights from all around the world. Sit back, relax and indulge in an exciting and innovative fare.</span><p></p>
+									<span>RESTAURANTS</span>
+									<span>
+														<ul>
+										<li>Urbano Restaurant</li>
+										<li>Chinese Restaurant & Bar</li>
+										<li>Bundoo Khan Restaurant</li>
+										
+														</ul>
+									</span>
+								</div>
+								
+								<div id="imgline">
+									&nbsp;
+								</div>
+								
+							</div>													
+						</li>													
+																											
+						<!-- /Services Tab -->							
+						
+						<!-- Subscribe Tab -->	
+						
+						<li class="content_tab_item" id="subscribe">
+								<div class="logo-tabs">
+									<img src="img/logo.png" width="175px" alt="" />
+							    </div>
+							<div class="content_tab_inner centered">
+								<div id="textline">
+									<span>The concord comes replete with life's finest luxuries. Choose between taking a leisurely dip at the aquamarine pool, or let our masseuse pamper you at the spa. Her, you'll never be out of things to do and places to go.</span><p></p>
+									<span>FEATURES</span>
+									<span>
+									<ul>
+										<li>Swimming pool on the 7th Floor</li>
+										<li>Fitness centre and Spa</li>
+										<li>Separate steam, sauna and jacuzzi facilities for ladies and gents</li>										
+														</ul>
+									</span>
+								</div>
+								
+								<div id="imgline">
+									&nbsp;
+								</div>
+								
+							</div>
+						</li>
+								<div class="copyright1">Copyright &copy; The Concord Hotel & Suites, 2015</div>
+						<!-- /Subscribe Tab -->
+						
+						<!-- Contacts Tab -->	
+						
+						<li class="content_tab_item" id="contacts">
+							<div class="logo-tabs">
+									<img src="img/logo.png" width="175px" alt="" />
+							</div>
+							<div class="content_tab_inner centered">
+								<div id="textline">
+									<span>The Hotel is strategically located on Wangapala Road at a walking distance from The Diamond Plaza Shopping Centre and The Aga Khan University Hospital. What's more, everything you need, from parks to airports, is just a short drive away.</span><p></p>
+									<span><a href="#">Click here</a> to view the distance chart</span>
+								</div>
+								
+								<div id="imgline">
+									&nbsp;
+								</div>
+								
+							</div>
+						</li>
+							<div class="copyright1">Copyright &copy; The Concord Hotel & Suites, 2015</div>
+						<!-- /Contacts Tab -->
+						
+						<!-- Accomodation Tab -->	
+						
+						<li class="content_tab_item" id="accomodation">
+							<div class="logo-tabs">
+									<img src="img/logo.png" width="175px" alt="" />
+							</div>
+							<div class="content_tab_inner centered">
+								<div id="textline">
+									<span>At The Concord, you will indulge in a stay unlike any other. With over 86 lavish rooms, here, you enjoy the finest indulgence and a lifestyle designed around your wishes. Welcome to a live that that leaves nothing to your imagination.</span><p></p>
+									<span>INDOOR FEATURES;</span>
+									<span>
+									<ul>
+										<li>Complete modern pointsfor TV/DSTV/cable TV, telephone, fibreoptic internet, intercom, push button alarm, smoke detectors and instant hot water in each room.</li>																		
+														</ul>
+									</span>
+								</div>
+								
+								<div id="imgline">
+									&nbsp;
+								</div>
+								
+							</div>
+						</li>
+							<div class="copyright1">Copyright &copy; The Concord Hotel & Suites, 2015</div>
+						<!-- /Accomodation Tab -->
+						
+						<!-- Contacts Tab -->	
+						
+						<li class="content_tab_item" id="contacts1">
+							<div class="logo-tabs">
+									<img src="img/logo.png" width="175px" alt="" />
+							</div>
+							<div class="content_tab_inner centered">
+								<div id="textline">
+									<span>The Concord Hotel,<br>
+											31 Wangapala Road,<br>
+											P. O. Box 49434 - 00100, Nairobi.<p></p>
+											T : +254 (20) 386 0119/20<br>
+											F : +254 (20) 374 0212<br>
+											M : +254 786 404 994/ +254 715 404 994<br>
+											E : hospitality@chaturgroup.com</span>
+								</div>
+								
+								<div id="imgline">
+									&nbsp;
+								</div>
+								
+							</div>
+						</li>
+						<div class="copyright1">Copyright &copy; The Concord Hotel & Suites, 2015</div>
+						<!-- /Contacts Tab -->
+						
+					</ul>
+				</div>			
+			</div>
+		</section>
+	
+	
+	
+</body>
+</html>

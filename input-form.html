@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Concord - Hotel & Suites</title>
+		<link rel='shortcut icon' href='favicon.ico'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset='utf-8'>
+		
+		
+		<link href="css/style.css" rel="stylesheet" media="screen">
+		<link href="css/style-1.css" rel="stylesheet" media="screen">
+		<link href="css/responsive.css" rel="stylesheet" media="screen">
+		<link href="css/flexslider.css" rel="stylesheet" media="screen">
+		<link href="css/jquery.datetimepicker.css" rel="stylesheet" type="text/css"/>
+		
+		
+		<style type='text/css'>
+			#date1, #date2
+			{
+				width:95%;
+				background:#fff url(images/date_icon.png) no-repeat scroll 87px center / 15px auto;
+				border: 1px solid #58595B;
+				border-radius: 1px;
+				padding: 2px;
+				margin: 0px;
+				height: 30px;
+				cursor: text;
+			}
+			#adlt1, #chld1, #room1 {
+				width:100%;
+				background: none repeat scroll 0 0 #FFFFFF;
+				border: 1px solid #58595B;
+				border-radius: 1px;
+				padding: 2px;
+				margin: 0px;
+				height: 30px;
+				-moz-appearance: none;
+			}
+			@-moz-document url-prefix() {
+				#adlt1, #chld1 {
+					background:#fff url(images/down_icon.png) no-repeat scroll 87px center / 10px auto;
+				}
+				#room1 {
+					background:#fff url(images/down_icon.png) no-repeat scroll 204px center / 10px auto;
+				}
+			}
+		</style>
+	</head>
+	
+	
+	
+<body style="background: background: rgba(0, 0, 0, 0)!important">
+	<div class="bookform inline">
+		<form>
+			<table>
+				<tr>
+					<td colspan="2">
+						<div id="checkrooms">
+							<div>CHECK</div>
+							<div>AVAILABILITY FOR</div>
+							<div><b>GOOD OFFERS</b></div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td width="50%">
+						<input type="text" name="date1" id="date1" class="dtpfield" placeholder=" CHECK IN" readonly="" onpaste="alert('heyyyy')" />
+					</td>
+					
+					<td width="50%">
+						<input type="text" name="date2" id="date2" class="dtpfield" placeholder="CHECK OUT" readonly="">
+					</td>
+				</tr>
+				
+				<tr>
+					<td width="50%">
+						<select id="adlt1" name="adlt1" class="input-text mid-level-input-width">
+							<option value="0">ADULTS</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</td>
+					
+					<td width="50%">
+						<select id="chld1" name="chld1" class="input-text mid-level-input-width">
+							<option value="0">CHILDREN</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="2">
+						<select id="room1" name="room1" class="input-text mid-level-input-width">
+							<option value="0">TYPE OF ROOM</option>
+							<option value="1">DOUBLE ROOM</option>
+							<option value="2">SINGLE ROOM</option>
+							<option value="3">SINGLE DOUBLE</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="2">
+						<div class="booknow" onclick="submitform();">BOOK A ROOM</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.datetimepicker.js"></script>
+<script>/*
+	window.onerror = function(errorMsg) {
+		$('#console').html($('#console').html()+'<br>'+errorMsg)
+	}*/
+	$('.dtpfield').datetimepicker({
+		dayOfWeekStart : 1,
+		timepicker:false,
+		minDate:'12/09/2015',
+		format:'d/m/Y',
+		formatDate:'d/m/Y'
+	});
+	
+	$('#date1').on('change', function() {
+		
+	});
+	
+	$('.booknow').on('click', function() {
+		var i = 0;
+	
+		var date1 = $('#date1').val();
+		var date2 = $('#date2').val();
+		var adult = $('#adlt1').val();
+		var child = $('#chld1').val();
+		var rooms = $('#room1').val();
+		
+		if (date1 == ''){
+			set_red('date1');
+			i++;
+		}else{
+			set_grey('date1');
+		}
+		
+		if (date2 == ''){
+			set_red('date2');
+			i++;
+		}else{
+			set_grey('date2');
+		}
+		
+		if (adult == 0){
+			set_red('adlt1');
+			i++;
+		}else{
+			set_grey('adlt1');
+		}
+		
+		if (child == 0){
+			set_red('chld1');
+			i++;
+		}else{
+			set_grey('chld1');
+		}
+		
+		if (rooms == 0){
+			set_red('room1');
+			i++;
+		}else{
+			set_grey('room1');
+		}
+		
+		if (i >= 1){
+			return 0;
+		}
+		
+		$.post('input-submit.php', {date1:date1, date2:date2, adult:adult, child:child, rooms:rooms}, function(output){
+			
+			alert(output);
+		});
+	});
+	
+	function set_red(id)
+	{
+		document.getElementById(id).style.border="1px #F00 solid";
+	}
+
+	function set_grey(id)
+	{
+		document.getElementById(id).style.border="1px #58595b solid";
+	}
+	
+</script>
+</html>
